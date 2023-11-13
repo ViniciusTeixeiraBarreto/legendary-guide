@@ -1,5 +1,6 @@
 import { Body, Controller, Post, Get, Patch, Put, Param, Delete } from "@nestjs/common";
 import { CreateUserDTO } from "./dto/create-user.dto";
+import { UpdatePutUserDTO } from "./dto/update-user.dto";
 
 @Controller('users')
 export class UserController{
@@ -20,10 +21,10 @@ export class UserController{
     }
 
     @Put()
-    async update(@Body() body, @Param() param){
+    async update(@Body() {email, name, password}: UpdatePutUserDTO , @Param() param){
       return {
         method: 'put',
-        body,
+        email, name, password,
         param
       }
     }
