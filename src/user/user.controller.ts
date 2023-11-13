@@ -1,6 +1,6 @@
 import { Body, Controller, Post, Get, Patch, Put, Param, Delete } from "@nestjs/common";
 import { CreateUserDTO } from "./dto/create-user.dto";
-import { UpdatePutUserDTO } from "./dto/update-user.dto";
+import { UpdatePutUserDTO } from "./dto/update-put-user.dto";
 
 @Controller('users')
 export class UserController{
